@@ -5,12 +5,12 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import user from './user'
 import userReducer from './user'
 import productsReducer from './products'
+import singlePokemonReducer from './singlePoke'
 
 const reducer = combineReducers({
   user: userReducer,
-  products: productsReducer
-
-
+  products: productsReducer,
+  singlePokemonReducer
 })
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))
